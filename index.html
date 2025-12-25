@@ -4,45 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NavHans Academy | Global Maths Tutoring</title>
+    
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
     <style>
         :root {
-            --primary: #1a2a44; /* Deep Navy from logo */
-            --secondary: #c5a059; /* Elegant Gold from logo */
+            --primary: #1a2a44; 
+            --secondary: #c5a059; 
             --accent: #d4af37;
             --light: #fdfdfd;
             --text: #333;
         }
         body { font-family: 'Georgia', serif; margin: 0; color: var(--text); line-height: 1.6; background-color: #fff; }
-        
-        /* Header & Logo */
         header { background: white; color: var(--primary); padding: 2rem 1rem; text-align: center; border-bottom: 3px solid var(--secondary); }
         .logo-img { max-width: 180px; height: auto; margin-bottom: 10px; }
-        
         .container { max-width: 1100px; margin: auto; padding: 20px; }
-        
-        /* Hero Section */
         .hero { text-align: center; padding: 60px 20px; background: var(--primary); color: white; border-radius: 0 0 50px 50px; }
         .hero h2 { color: var(--secondary); font-size: 2.5rem; }
         
-        .cta-button { background: var(--secondary); color: white; padding: 18px 35px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; transition: 0.3s; margin-top: 20px; text-transform: uppercase; letter-spacing: 1px; }
-        .cta-button:hover { background: var(--primary); border: 1px solid var(--secondary); }
+        /* The Booking Button */
+        .cta-button { 
+            background: var(--secondary); 
+            color: white; 
+            padding: 18px 35px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+            display: inline-block; 
+            transition: 0.3s; 
+            margin-top: 20px; 
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Georgia', serif;
+        }
+        .cta-button:hover { background: var(--accent); transform: scale(1.05); }
 
-        /* Curriculum & Homework Section */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin: 40px 0; }
-        .box { background: white; border: 1px solid #e2e8f0; padding: 30px; border-radius: 5px; transition: 0.3s; position: relative; }
+        .box { background: white; border: 1px solid #e2e8f0; padding: 30px; border-radius: 5px; }
         .box h3 { color: var(--primary); border-bottom: 2px solid var(--secondary); display: inline-block; padding-bottom: 5px; }
         .homework-highlight { border: 2px solid var(--secondary); background: #fcf9f2; }
 
-        /* Testimonials */
         .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 30px; }
-        .testimonial-card { background: #f8f9fa; padding: 25px; border-left: 4px solid var(--secondary); font-style: italic; box-shadow: 2px 2px 10px rgba(0,0,0,0.05); }
+        .testimonial-card { background: #f8f9fa; padding: 25px; border-left: 4px solid var(--secondary); font-style: italic; }
         .parent-name { display: block; margin-top: 15px; font-weight: bold; font-style: normal; color: var(--primary); }
 
-        /* Pricing Card */
         .pricing-card { border: 2px solid var(--secondary); padding: 40px; border-radius: 10px; text-align: center; max-width: 400px; margin: 50px auto; background: var(--light); }
         .price { font-size: 3.5rem; color: var(--primary); font-weight: bold; margin: 10px 0; }
         
-        footer { text-align: center; padding: 40px; background: var(--primary); color: white; font-size: 0.9rem; border-top: 5px solid var(--secondary); }
+        footer { text-align: center; padding: 40px; background: var(--primary); color: white; border-top: 5px solid var(--secondary); }
     </style>
 </head>
 <body>
@@ -55,7 +67,10 @@
 <div class="hero">
     <h2>Global Mathematics Mastery</h2>
     <p>Premium 1-on-1 Online Tutoring for US, UK, and International Students.</p>
-    <a href="#contact" class="cta-button">Reserve a Session</a>
+    
+    <button class="cta-button" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/navhans/30min'});return false;">
+        Reserve a Session
+    </button>
 </div>
 
 <div class="container">
@@ -65,19 +80,15 @@
         <div class="grid">
             <div class="box">
                 <h3>🇺🇸 US Curriculum</h3>
-                <p>Expert guidance for Common Core, Algebra I & II, Geometry, Pre-Calculus, and AP Calculus. Specialized SAT/ACT prep.</p>
+                <p>Common Core, Algebra, Geometry, and AP Calculus. Specialized SAT/ACT prep.</p>
             </div>
             <div class="box">
                 <h3>🇬🇧 UK Curriculum</h3>
-                <p>Focused coaching for KS3, GCSE/IGCSE, and A-Level (Pure, Mechanics, Statistics) following Edexcel, AQA, and OCR standards.</p>
-            </div>
-            <div class="box">
-                <h3>🌍 IB & Global</h3>
-                <p>Preparation for IB MYP and Diploma Programme (Analysis & Approaches / Applications & Interpretation).</p>
+                <p>GCSE/IGCSE, and A-Level (Pure, Mechanics, Statistics) following UK standards.</p>
             </div>
             <div class="box homework-highlight">
                 <h3>📝 Homework Help</h3>
-                <p>We provide dedicated support for school assignments and projects to ensure students stay ahead of their classwork with 100% accuracy.</p>
+                <p>Dedicated support for school assignments to ensure 100% accuracy and understanding.</p>
             </div>
         </div>
     </section>
@@ -86,36 +97,32 @@
         <h2 style="text-align:center; color: var(--primary);">Parent Remarks</h2>
         <div class="testimonial-grid">
             <div class="testimonial-card">
-                "The structured approach and the focus on US curriculum standards helped my son score in the 99th percentile of his Math SATs."
+                "Visible improvement in grades within weeks. The US curriculum focus is excellent."
                 <span class="parent-name">— Sarah M. (California, USA)</span>
             </div>
             <div class="testimonial-card">
-                "Finding a tutor who understands the depth of UK A-Level Mechanics was hard until we found NavHans Academy. Exceptional quality."
+                "The most reliable A-Level tutoring we've found online. Highly recommend."
                 <span class="parent-name">— David T. (London, UK)</span>
-            </div>
-            <div class="testimonial-card">
-                "The $12/hr rate is incredible for the level of expertise provided. The homework help sessions have made math my daughter's favorite subject."
-                <span class="parent-name">— Priya K. (Dubai, UAE)</span>
             </div>
         </div>
     </section>
 
     <section id="pricing">
         <div class="pricing-card">
-            <h3 style="color: var(--secondary); text-transform: uppercase;">Standard Hourly Rate</h3>
+            <h3 style="color: var(--secondary);">Standard Hourly Rate</h3>
             <div class="price">$12</div>
             <p><strong>Per 60-Minute Session</strong></p>
-            <p>Conducted via Google Meet or Microsoft Teams</p>
-            <p>No monthly contracts • Pay as you learn</p>
+            <button class="cta-button" style="padding: 12px 25px; font-size: 0.8rem;" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/navhans/30min'});return false;">
+                Check Availability
+            </button>
         </div>
     </section>
 
 </div>
 
-<footer id="contact">
+<footer>
     <p><strong>NavHans Academy</strong></p>
-    <p>Email: sarnika2224@gmail.com</p>
-    <p>Online Sessions via Google Meet & Microsoft Teams</p>
+    <p>Email: contact@navhansacademy.com</p>
     <p style="margin-top: 20px; font-size: 0.7rem; opacity: 0.7;">&copy; 2025 NavHans Academy. All Rights Reserved.</p>
 </footer>
 

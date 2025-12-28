@@ -128,9 +128,9 @@
 </main>
 
 <section class="pricing-section">
-    <div class="price-card">
+    <div class="price-card">							`
         <h3>Standard Tuition Rate</h3>
-        <div class="price-val">$12<span style="font-size: 1.2rem; color: #666;"> /hr</span></div>
+        <div class="price-val">$15<span style="font-size: 1.2rem; color: #666;"> /hr</span></div>
         <p>No hidden fees. Accurate live conversion below:</p>
         <select id="currency-select" onchange="fetchLiveRate()" style="padding: 10px; border-radius: 5px;">
             <option value="GBP">UK Pound (£)</option>
@@ -189,7 +189,7 @@
             const data = await response.json();
             const rate = data.rates[curr];
             const symbols = { "GBP": "£", "INR": "₹", "EUR": "€", "AED": "AED " };
-            resDisplay.innerText = `${symbols[curr]}${(12 * rate).toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+            resDisplay.innerText = `${symbols[curr]}${(15 * rate).toLocaleString(undefined, {minimumFractionDigits: 2})}`;
         } catch (e) { resDisplay.innerText = "Error loading rates."; }
     }
     window.onload = fetchLiveRate;
